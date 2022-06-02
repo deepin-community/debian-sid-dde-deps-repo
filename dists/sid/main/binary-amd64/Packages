@@ -1,0 +1,285 @@
+Package: dde-kwin
+Version: 5.5.16+r002+gc3dd6e8b9-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 9
+Provides: dde-wayland-config, dde-wldpms, dde-wloutput, dde-wloutput-daemon, deepin-installer-timezones, deepin-sync-daemon, deepin-turbo, deepin-turbo-booster, gvfs-bin, libdareader1, libfprint0, uos-license-content
+Homepage: http://github.com/linuxdeepin/startdde
+Priority: standard
+Section: metapackages
+Filename: pool/main/d/dde-kwin/dde-kwin_5.5.16+r002+gc3dd6e8b9-1_amd64.deb
+Size: 1840
+SHA256: e31fee63d2b2d235c4488ae5e44122907a759a6ca0210dad07394f098fcea7a4
+SHA1: c088f6eaa5e26a44979c57634a452d65d9c0cc30
+MD5sum: 95d6e3ddb8af96c2392aef54f3983f4b
+Description: dde-kwin fake
+ dde-kwin fake package
+
+Package: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 9898
+Depends: dde-api, libpam-runtime (>= 1.3.1.11), libc6 (>= 2.33), libglib2.0-0 (>= 2.70.0), libgtk-3-0 (>= 3.0.0), libjson-c5 (>= 0.15), libpam0g (>= 0.99.7.1), libssl3 (>= 3.0.0), libsystemd0 (>= 237)
+Recommends: dde-qt5integration, deepin-face
+Conflicts: deepin-session, deepin-wm-switcher
+Homepage: http://www.deepin.org
+Priority: optional
+Section: devel
+Filename: pool/main/d/deepin-authenticate/deepin-authenticate_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 2480728
+SHA256: fa9209b249c5ce266fcb06d35396f215e8f814668c166598393535a015cf5bf3
+SHA1: 5a5dbc65d6f57e8fe75747a7cb03daba8af6c5ff
+MD5sum: 5f2f3ae2f3be5a64502560d8a4c8f6cc
+Description: deepin authenticate service
+ deepin authentication is a service for user identifing.
+
+Package: deepin-authenticate-dbgsym
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 3986
+Depends: deepin-authenticate (= 1.3.23+r500+gd6bc03b-1)
+Priority: optional
+Section: debug
+Filename: pool/main/d/deepin-authenticate/deepin-authenticate-dbgsym_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 3086452
+SHA256: 50976693b85f3105b8ac17df996671115a1d5bac524a606799f23ca151d0e090
+SHA1: c04e432ef1cd6333f7610889dd10e8bae4ad50bb
+MD5sum: 480158cfd0968dd88a171b6607c432fa
+Description: debug symbols for deepin-authenticate
+Build-Ids: 5b6d2c69d9e500f5845d84de2f860c4bd7c17f35 858bc9c4b687c765c754a0f9dcfa6994ff7262d7 f708df4d37a8e1693d3350a71d581b0ef08ce592
+
+Package: deepin-keyring
+Version: 2021.06.07-1
+Architecture: all
+Maintainer: lilongyu <leaeasy@linuxdeepin.com>
+Installed-Size: 35
+Depends: gnupg
+Recommends: gpgv
+Multi-Arch: foreign
+Priority: important
+Section: misc
+Filename: pool/main/d/deepin-keyring/deepin-keyring_2021.06.07-1_all.deb
+Size: 8408
+SHA256: f21364b031c798d1a0b063f23b608507926480677971b9ebc10f6c28da6504d0
+SHA1: e0c72479d4268ae0e75b129fa4ff718d186af06c
+MD5sum: 5bf84a882c64781a31765147909f6949
+Description: GnuPG keys of the Deepin archive
+ The Deepin project digitally signs its Release files. This package
+ contains the archive keys used for that.
+
+Package: golang-github-gavv-monotime-dev
+Source: golang-github-gavv-monotime
+Version: 0.1-1
+Architecture: all
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 18
+Homepage: https://github.com/gavv/monotime
+Priority: extra
+Section: devel
+Filename: pool/main/g/golang-github-gavv-monotime/golang-github-gavv-monotime-dev_0.1-1_all.deb
+Size: 3660
+SHA256: 47c0283ea09aa1c83cf652f43be0a586db47f95b984c9d762e0393dd690a5be4
+SHA1: 22230588a0c84559129968c5a9b4d6a22b7a2b85
+MD5sum: 6f155ecae3b17dd8fddb6ca0b70009f0
+Description: Measuring time intervals correctly in Go (monotonic clock).
+ monotime GoDoc (https://godoc.org/github.com/gavv/monotime) Travis
+ (https://travis-ci.org/gavv/monotime) This tiny Go package is
+ a standalone and slightly enhanced version of goarista/monotime
+ (https://github.com/aristanetworks/goarista#monotime).
+ .
+ It provides monotime.Now() function, which returns current time
+ from monotonic clock source. It's implemented using unexported
+ runtime.nanotime() function from Go runtime. It works on all platforms.
+ Why?  time.Now() function from standard library returns real time
+ (CLOCK_REALTIME in POSIX) which can jump forwards and backwards as the
+ system time is changed.
+ .
+ For time measurements, monotonic time (CLOCK_MONOTONIC or
+ CLOCK_MONOTONIC_RAW on Linux) is often preferred, which is strictly
+ increasing, without (notable) jumps.  Documentation See GoDoc
+ (https://godoc.org/github.com/gavv/monotime).  Usage example ```go
+ package main
+ .
+ import (
+     "fmt" "time"
+ "github.com/gavv/monotime"
+ .
+ )
+ .
+ func main() {
+     var start, elapsed time.Duration
+ start = monotime.Now() time.Sleep(time.Millisecond) elapsed =
+ monotime.Since(start)
+ .
+ fmt.Println(elapsed) // Prints: 1.062759ms
+ .
+ } ``` Similar packages• aristanetworks/goarista/monotime
+ (https://github.com/aristanetworks/goarista#monotime)
+ (this package is based on it)• spacemonkeygo/monotime
+ (https://github.com/spacemonkeygo/monotime) (current
+ runtime.nanotime() is more complete)• davecheney/junk/clock
+ (https://github.com/davecheney/junk/tree/master/clock) (Linux-only)•
+ jaracil/clk (https://github.com/jaracil/clk) (Linux-only)License Apache
+ 2.0 (https://github.com/gavv/monotime/blob/master/LICENSE)
+
+Package: golang-github-lofanmi-pinyin-dev
+Version: 1.0.2-1
+Architecture: all
+Maintainer: Uniontechos THIRD Maintainers <uniontechos-third@uniontech.com>
+Installed-Size: 1006
+Homepage: http://www.deepin.com
+Priority: optional
+Section: utils
+Filename: pool/main/g/golang-github-lofanmi-pinyin-dev/golang-github-lofanmi-pinyin-dev_1.0.2-1_all.deb
+Size: 247620
+SHA256: 761726f4bac92e162b4ea25d0a99b3b4c98e5a9e8cfea5456d707f48a55abe8d
+SHA1: 1b520b103bf16e6ddd12b2aaac227ff6e9541ce3
+MD5sum: a2743bc2d444bbd212f8daa9c861ac89
+Description: Chinese to pinyin class library
+ provide more accurate Chinese to pinyin solutions.
+
+Package: ipwatchd
+Version: 1.2.2+fake-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 9
+Homepage: http://github.com/linuxdeepin/startdde
+Priority: standard
+Section: metapackages
+Filename: pool/main/i/ipwatchd/ipwatchd_1.2.2+fake-1_amd64.deb
+Size: 1728
+SHA256: 0469df857af72078e078a5ec52f14b549cc251779497fa770d3f9776c0ab9ca0
+SHA1: c24c3295c8ab0ad0eb610047a02432d2fd3e91ea
+MD5sum: 959d3502d47c61d1ab7dd457fd4f1cec
+Description: start deepin desktop environment
+ starter of deepin desktop environment.
+
+Package: lastore-daemon
+Version: 5.3.22+fake-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 9
+Homepage: http://github.com/linuxdeepin/startdde
+Priority: standard
+Section: metapackages
+Filename: pool/main/l/lastore-daemon/lastore-daemon_5.3.22+fake-1_amd64.deb
+Size: 1752
+SHA256: a31007d0beafbc7aeee7521bebead11bcfdfcd6faa79b94746bcae2477f994a8
+SHA1: 0f3b07b880d4feb6a7fa7e8dad98016971f5cea8
+MD5sum: 40448f5095daa2396ce0408a7697bcf6
+Description: start deepin desktop environment
+ starter of deepin desktop environment.
+
+Package: libdareader-dev
+Source: libdareader
+Version: 1.0.2-1
+Architecture: amd64
+Maintainer: chenlinxuan <chenlinxuan@uniontech.com>
+Installed-Size: 17
+Depends: libdareader1 (= 1.0.2-1)
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Filename: pool/main/libd/libdareader/libdareader-dev_1.0.2-1_amd64.deb
+Size: 2612
+SHA256: 9da31a3d945de65c12cd611a41d5038ee8eda3fa4f73fabf685b26bebedb4998
+SHA1: 67db5d836be00a3dc16f04f7c779632da8a42f05
+MD5sum: 999db41234e30742f4eb0d984d0b1799
+Description: dev lib for read image/video data from deepin-authentication
+ this package is a dev lib for read image/video data from deepin-authentication.
+
+Package: libdareader1
+Source: libdareader
+Version: 1.0.2-1
+Architecture: amd64
+Maintainer: chenlinxuan <chenlinxuan@uniontech.com>
+Installed-Size: 32
+Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.0), libstdc++6 (>= 6)
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libd/libdareader/libdareader1_1.0.2-1_amd64.deb
+Size: 5780
+SHA256: af0fdf3776cb16548b128d9dc58471a2fff9ee8d93e9b781a10b567bbe2cce4d
+SHA1: 5693e08bec0849614946b5fc1772b44745985a6a
+MD5sum: e7949c754824cd1ed86a7e2a5f398a8b
+Description: lib for read image/video data from deepin-authentication
+ this package is a lib for read image/video data from deepin-authentication.
+
+Package: libdareader1-dbgsym
+Source: libdareader
+Version: 1.0.2-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: chenlinxuan <chenlinxuan@uniontech.com>
+Installed-Size: 55
+Depends: libdareader1 (= 1.0.2-1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/libd/libdareader/libdareader1-dbgsym_1.0.2-1_amd64.deb
+Size: 41180
+SHA256: ee11accc0676acd8e8ed0e9c996ba41b4c3b6a833febdf000ef8c54a0eb8c0e2
+SHA1: bae14bad1e27f04e05e670f9b11d547aa1a4bd4e
+MD5sum: bb3e1b03d608d8378c016e848e54ee75
+Description: debug symbols for libdareader1
+Build-Ids: 02571e603a7cd707a2281b0c8e9f0e34d6f18ee1
+
+Package: libdeepin-authenticate
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 137
+Depends: libc6 (>= 2.33), libglib2.0-0 (>= 2.37.3), libjson-c5 (>= 0.15), libssl3 (>= 3.0.0)
+Homepage: http://www.deepin.org
+Priority: optional
+Section: devel
+Filename: pool/main/d/deepin-authenticate/libdeepin-authenticate_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 29932
+SHA256: 113f4fd58c21a12d1154f5cb6d9418810c26a0a1c6dfcb8b0d522d57229b3a97
+SHA1: 7809051e0a73f772578f6d174c993e69c3b4ece9
+MD5sum: e55ace0ac30623ce6685a077d3f86357
+Description: deepin authenticate development kit
+ libdeepin-authentication is a development kit to develop application for authentication.
+
+Package: libdeepin-authenticate-dbgsym
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 52
+Depends: libdeepin-authenticate (= 1.3.23+r500+gd6bc03b-1)
+Priority: optional
+Section: debug
+Filename: pool/main/d/deepin-authenticate/libdeepin-authenticate-dbgsym_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 8216
+SHA256: 7da3459caa85a584a0a2792e8d41121da9137ec545143148df5f4c7aab245e8e
+SHA1: 55c80004ba312b5b9a3d5ed05e6b4e50b23870f0
+MD5sum: 6c457c3550f088fa0a8b8c60cd2e2fd6
+Description: debug symbols for libdeepin-authenticate
+Build-Ids: 6f156a9f5e9f5e7eb064d45d7aaf391a55e807f7
+
+Package: libdeepin-authenticate-dev
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 31
+Depends: libdeepin-authenticate
+Homepage: http://www.deepin.org
+Priority: optional
+Section: devel
+Filename: pool/main/d/deepin-authenticate/libdeepin-authenticate-dev_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 4852
+SHA256: 2540f6132f84995e20daa0db96a0ff12f1fae10caba8ac3c1787ac3bca4cac71
+SHA1: 0825f9d5f2adf2c7b600c597c1be7ba4fd9dcb0e
+MD5sum: 7a0208b5672997f8a2afa9bf73badb40
+Description: deepin authenticate development kit's file
+ libdeepin-authentication-dev is some file for libdeepin-authenticate.
+
