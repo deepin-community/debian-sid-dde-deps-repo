@@ -1,0 +1,614 @@
+Package: dde-kwin
+Version: 5.5.11+deepin
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 1288
+Depends: libc6 (>= 2.34), libdtkcore5 (>= 5.6), libdtkgui5 (>= 5.6), libgcc-s1 (>= 3.0), libgsettings-qt1 (>= 0.1+14.04.20140408), libkdecorations2-5v5 (>= 4:5.14.3), libkf5configcore5 (>= 4.97.0), libkf5coreaddons5 (>= 4.99.0), libkf5globalaccel-bin, libkf5globalaccel5 (>= 5.10.0), libkf5windowsystem5 (>= 4.100.0), libqt5core5a (>= 5.15.1), libqt5dbus5 (>= 5.14.1), libqt5gui5 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5qml5 (>= 5.0.2), libqt5quick5 (>= 5.0.2) | libqt5quick5-gles (>= 5.0.2), libqt5widgets5 (>= 5.2.0), libqt5x11extras5 (>= 5.7.0), libstdc++6 (>= 5.2), libx11-6, qtbase-abi-5-15-6, kwin-x11, kwin-wayland, plasma-framework, qml-module-qtquick-controls2, qml-module-qtquick-templates2
+Homepage: https://github.com/linuxdeepin/dde-kwin
+Priority: optional
+Section: devel
+Filename: pool/main/d/dde-kwin/dde-kwin_5.5.11+deepin_amd64.deb
+Size: 258044
+SHA256: 5d67247719a6617e788a7bd4911388afe643cd9909dcc0798d32e49d3828f8d4
+SHA1: 5dbf8ba749e278b4ffc1ede3586f2bbc74e7fd49
+MD5sum: 94c3e7f8f35f7a596f2dbf927a71a338
+Description: KWin configures/plugins on the DDE
+ Let kwin work well in the Deepin Desktop Environment.
+
+Package: dde-kwin-dbgsym
+Source: dde-kwin
+Version: 5.5.11+deepin
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 6395
+Depends: dde-kwin (= 5.5.11+deepin)
+Priority: optional
+Section: debug
+Filename: pool/main/d/dde-kwin/dde-kwin-dbgsym_5.5.11+deepin_amd64.deb
+Size: 6304672
+SHA256: 9808cfb5d1e1b344e9dc65a2445fbcbed76ed3f20cfd6c25b0c44300bb4760b5
+SHA1: 76cc97069ffe6bfb036820ee4613b33e472d2bce
+MD5sum: b2ab04008fbe34b560f42c3e9b5b91b0
+Description: debug symbols for dde-kwin
+Build-Ids: 340d2c9948a01e9a853c6da35d8f73a1bd9b4a3f 4770cd52962ce71f018aac61e4ed710e7db37109 496da0063ff4bf633676386202286a961b845fb6 6b0871aba9f0e8b4526704caa6919f1130e741fe 74dcf050d2bbdc0b0bb3b5093ea2218f58c489f5 fbc0fbc6baddada5ebdb7cad42e7590a4c242b1b
+
+Package: dde-kwin-dev
+Source: dde-kwin
+Version: 5.5.11+deepin
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 34
+Homepage: https://github.com/linuxdeepin/dde-kwin
+Priority: optional
+Section: libdevel
+Filename: pool/main/d/dde-kwin/dde-kwin-dev_5.5.11+deepin_amd64.deb
+Size: 8100
+SHA256: f71cb1aad5b2569d890dfba67c3ca20ae6e1e961cea4ca01d1c562fba36538d0
+SHA1: e361ba098fd73371af91de4baedb1efe58316502
+MD5sum: 1ff90d0a46f0edd3e735822cc57716a2
+Description: Developer package of dde-kwin
+ Provide dde-kwin plugin implementation basis files.
+
+Package: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 10166
+Depends: dde-api, libpam-runtime (>= 1.3.1.11), libc6 (>= 2.34), libglib2.0-0 (>= 2.70.0), libgtk-3-0 (>= 3.0.0), libjson-c5 (>= 0.15), libpam0g (>= 0.99.7.1), libssl3 (>= 3.0.0), libsystemd0 (>= 237)
+Recommends: dde-qt5integration, deepin-face
+Conflicts: deepin-session, deepin-wm-switcher
+Homepage: http://www.deepin.org
+Priority: optional
+Section: devel
+Filename: pool/main/d/deepin-authenticate/deepin-authenticate_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 2543936
+SHA256: f8052efeb344a6a7995227474c6eee6f952a0adeebb41a967df2d2a4e604bc54
+SHA1: e213221dcf5684604ec96ea109ba24010417be60
+MD5sum: 24ef7ed6925c8a10b73b0caf5ab8fd55
+Description: deepin authenticate service
+ deepin authentication is a service for user identifing.
+
+Package: deepin-authenticate-dbgsym
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 4144
+Depends: deepin-authenticate (= 1.3.23+r500+gd6bc03b-1)
+Priority: optional
+Section: debug
+Filename: pool/main/d/deepin-authenticate/deepin-authenticate-dbgsym_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 3223032
+SHA256: 2ea4823c9bf5e5881b5fc6305a53a8d2321eb32d513681749c15d72c5499b233
+SHA1: 7f37a7ff1a80af663a73ed996ab18e39ffc5a9b4
+MD5sum: bd1179b20976f180892bc7df41143029
+Description: debug symbols for deepin-authenticate
+Build-Ids: 2d1fab25130839993591fcfce66428b317dec9cf 76df4a802a1082eb6946fe18dfe468409d1304c8 85b7eba1a4039dbc1cce09a1a2e1180849c8f51d
+
+Package: deepin-default-settings
+Version: 2021.04.13-1
+Architecture: all
+Maintainer: sysdev <sysdev@deepin.com>
+Installed-Size: 2025
+Depends: deepin-artwork, deepin-default-settings-tuning (>= 2018.1.23), deepin-wallpapers, iw, python3
+Suggests: binfmt-support
+Conflicts: chrome-default-settings, deepin-default-settings-network, deepinop
+Replaces: deepin-default-settings-network, deepinop
+Priority: optional
+Section: admin
+Filename: pool/main/d/deepin-default-settings/deepin-default-settings_2021.04.13-1_all.deb
+Size: 1916068
+SHA256: 7b516c19576b6f7b3c23b2593d528317f2417c1140d37e7e59eefa003a355d3c
+SHA1: 16118ea094cca1226877e7002b5030eb520d3c4c
+MD5sum: a65614ce4ea07d8aa2ebc447119600e6
+Description: default settings for deepin destkop environment
+ This package does tweaking and to provide better experience of deepin desktop
+ environment.
+
+Package: deepin-default-settings-tuning
+Source: deepin-default-settings
+Version: 2021.04.13-1
+Architecture: all
+Maintainer: sysdev <sysdev@deepin.com>
+Installed-Size: 37210
+Replaces: deepin-default-settings (<= 2018.1.23)
+Priority: optional
+Section: admin
+Filename: pool/main/d/deepin-default-settings/deepin-default-settings-tuning_2021.04.13-1_all.deb
+Size: 10637452
+SHA256: 4b0a11b3624d7d256865bf359d3a260d69385e0cb456d76b246a232cd41e0db7
+SHA1: 268091f5c7e58f3d18c5d1b709ac1f1f974e242d
+MD5sum: 84b433ac7f813ef0f0631cbda3ea73d1
+Description: default settings for deepin destkop environment - misc overrides
+ This package does tweaking and to provide better experience of deepin desktop
+ environment.
+ .
+ This package includes files to override cups default page and fcitx icon.
+
+Package: deepin-desktop-environment-base
+Source: deepin-desktop-environment
+Version: 1.0
+Architecture: amd64
+Maintainer: LinuxDeepin Project <linuxdeepin@linuxdeepin.com>
+Installed-Size: 8
+Depends: adduser, apt, apt-utils, base-files, base-passwd, bash, bsdutils, coreutils, dash, debconf, debianutils, deepin-keyring, diffutils, dpkg, e2fsprogs, fdisk, findutils, gcc, gcc-11, gcc-11-base, gpgv, grep, gzip, hostname, init, libacl1, libattr1, libaudit1, libbz2-1.0, libc-bin, libc6, libcap-ng0, libdebconfclient0, libgcrypt20, libgmp10, libgnutls30, libgpg-error0, libidn2-0, liblocale-gettext-perl, liblz4-1, liblzma5, libncurses6, libp11-kit0, libpam-runtime, libpcre3, libselinux1, libstdc++6, libunistring2, libzstd1, login, lsb-base, mawk, mount, ncurses-base, ncurses-bin, passwd, perl-base, sed, sensible-utils, systemd, tar, tzdata, udev, util-linux, zlib1g
+Recommends: libffi6, libsepol1, libsemanage1, libnettle6
+Homepage: http://www.linuxdeepin.com
+Priority: standard
+Section: metapackages
+Filename: pool/main/d/deepin-desktop-environment/deepin-desktop-environment-base_1.0_amd64.deb
+Size: 2156
+SHA256: 24feb41e19f81ecb465764c9750093d23ff3429c79e957f0d9c8353507e992ca
+SHA1: 19320a32daab30a648119c8621a66dc14d4341a1
+MD5sum: 56e86833e340d9827141bde1165e2127
+Description: Deepin New Desktop Environment - Next
+ This is a base meta package depends Deepin New Desktop Envrionment.
+ .
+ You can safety remove it after installed.
+
+Package: deepin-desktop-environment-cli
+Source: deepin-desktop-environment
+Version: 1.0
+Architecture: amd64
+Maintainer: LinuxDeepin Project <linuxdeepin@linuxdeepin.com>
+Installed-Size: 8
+Depends: accountsservice, acpid, alsa-utils, bluez, dbus-user-session, dbus-x11, dialog, dmidecode, dnsutils, file, gcr, grub-common, initramfs-tools, laptop-mode-tools, less, libc6-dev, libglib2.0-bin, libimobiledevice-utils, libmtp-runtime, live-config, locales, lvm2, man-db, network-manager, openssh-client, openssh-server, ostree, pkg-config, pulseaudio, pulseaudio-module-bluetooth, rsyslog, rzip, sudo, unace, unalz, unar, unzip, vim, xdg-user-dirs, xdg-utils, xz-utils, zip, apt-transport-https, arj, avfs, bash-completion, cifs-utils, crda, dbus, dkms, dpkg-dev, efibootmgr, exfat-fuse, exfat-utils, foomatic-db-compressed-ppds, foomatic-db-engine, fprintd, geoclue-2.0, gtk2-engines, gtk2-engines-murrine, gtk2-engines-pixbuf, gvfs-backends, gvfs-fuse, hdparm, iio-sensor-proxy, im-config, ipheth-utils, lhasa, libboost-regex1.74.0, libboost-thread1.74.0, libfile-mimeinfo-perl, libimobiledevice-dev, libncurses5, libnss-myhostname, libpam-fprintd, libpam-gnome-keyring, libpulse-mainloop-glib0, libqt5svg5, libtirpc3, libtirpc-common, libvdpau1, linux-firmware, lsb-release, mdadm, modemmanager, ncompress, net-tools, onboard, openprinting-ppds, plymouth, pppoe, proxychains4, pulseaudio-utils, python3-dbus, python3-dnspython, python3-gi, python3-ldb, python3-samba, python3-smbc, python3-tdb, python-is-python3, qdbus, qml-module-org-kde-kquickcontrolsaddons, qml-module-qtquick-controls2-styles-chameleon, qttranslations5-l10n, redshift, rfkill, sdparm, slirp4netns, smbclient, tdb-tools, usb-modeswitch, usbmuxd, usbutils, user-setup, wireless-tools, xorg, xserver-xorg-core, xserver-xorg-input-all
+Recommends: aptitude, hostapd, lz4, lzip, lzma, lzop, xserver-xorg-input-wacom
+Homepage: http://www.linuxdeepin.com
+Priority: standard
+Section: metapackages
+Filename: pool/main/d/deepin-desktop-environment/deepin-desktop-environment-cli_1.0_amd64.deb
+Size: 2612
+SHA256: d47860569d6c1cb364405ae7a6ddb3d687ea073108dc99fa7f94ca3b424b3b80
+SHA1: 9b02e1e5495d2aa0e9c7257df4c448ed92075b1b
+MD5sum: fd260153d974a402847d5fd0a5642107
+Description: Deepin New Desktop Environment - Next
+ This is a cli meta package depends Deepin New Desktop Envrionment.
+ .
+ You can safety remove it after installed.
+
+Package: deepin-desktop-environment-core
+Source: deepin-desktop-environment
+Version: 1.0
+Architecture: amd64
+Maintainer: LinuxDeepin Project <linuxdeepin@linuxdeepin.com>
+Installed-Size: 8
+Depends: dde-clipboard, dde-control-center, dde-desktop, dde-dock, dde-file-manager, dde-kwin, dde-launcher, dde-qt5integration, dde-session-ui, deepin-default-settings, deepin-desktop-base, deepin-icon-theme, lightdm, startdde, deepin-authenticate, dde-daemon, dde-session-shell, deepin-desktop-schemas, deepin-installer-timezones
+Recommends: cups, ttf-deepin-opensymbol, fcitx-sunpinyin, fcitx-ui-classic
+Provides: deepin-artwork
+Homepage: http://www.linuxdeepin.com
+Priority: standard
+Section: metapackages
+Filename: pool/main/d/deepin-desktop-environment/deepin-desktop-environment-core_1.0_amd64.deb
+Size: 1992
+SHA256: f32cfa2f796ca9b35e82459eba1e0a7d9b4e4f36d9e929c50988b25ff805eb69
+SHA1: 49b33dbbe5beec0c4d06921b5198f02f6b8e5833
+MD5sum: e1f43233a9bd4236055012eab718b947
+Description: Deepin New Desktop Environment - Next
+ This is a dde package depends Deepin New Desktop Envrionment.
+ .
+ You can safety remove it after installed.
+
+Package: deepin-desktop-environment-extras
+Source: deepin-desktop-environment
+Version: 1.0
+Architecture: amd64
+Maintainer: LinuxDeepin Project <linuxdeepin@linuxdeepin.com>
+Installed-Size: 8
+Depends: deepin-op, libdareader1, dde-dconfig-daemon, dde-qt5wayland-plugin, dde-manual-content, dcc-network-plugin, dock-network-plugin, dde-network-dialog, com.deepin.gomoku, com.deepin.lianliankan, deepin-log-viewer, deepin-dvsrv, dde-printer, deepin-elf-sign-tool, deepin-elf-verify, deepin-boot-maker, deepin-clone, deepin-sync-daemon, deepin-ocr, deepin-picker, libimageeditor, deepin-fcitxconfigtool-plugin, dde-api, dde-account-faces, dde-disk-mount-plugin, dde-dock-onboard-plugin, deepin-shortcut-viewer, libepoxy0, libgbm1, libkf5i18n5, libkf5waylandclient5, libkf5waylandserver5, libkf5windowsystem5, fcitx, fcitx-config-gtk, fcitx-frontend-gtk2, fcitx-frontend-gtk3, fcitx-frontend-qt5, fcitx-module-dbus, fcitx-module-kimpanel, fcitx-module-lua, fcitx-modules, fcitx-module-x11, fcitx-pinyin, fcitx-sunpinyin, fcitx-table, fcitx-table-wubi, fcitx-ui-classic, fonts-lohit-deva, fonts-noto, fonts-noto-cjk, fonts-noto-mono, fonts-noto-unhinted, cups, cups-filters, samba, samba-common-bin, samba-dsdb-modules, samba-vfs-modules, dde-introduction, deepin-deb-installer, deepin-deepinid-client, deepin-defender, deepin-defender-vdbup, deepin-devicemanager, deepin-diskmanager, dde-grand-search, deepin-screensaver, dde-widgets, deepin-anything-server, dde-desktop-plugins, dde-file-manager-plugins, dde-file-manager-common-plugins, dde-file-manager-daemon-plugins, dde-file-manager-preview-plugins, libudfburn
+Homepage: http://www.linuxdeepin.com
+Priority: standard
+Section: metapackages
+Filename: pool/main/d/deepin-desktop-environment/deepin-desktop-environment-extras_1.0_amd64.deb
+Size: 2380
+SHA256: 7cc8063f07cfbdfe26059c9db92dd7362aed000419813146849a3ced8cba4005
+SHA1: 173950f639f645bfd10f098d77e60b78062f4728
+MD5sum: c503ae1871d6ea55d7fea63d29091e31
+Description: Deepin New Desktop Environment - Next
+ This is a extras package depends Deepin New Desktop Envrionment.
+ .
+ This package installs the standard set of applications that are
+ part of the official deepin release.
+ You can safety remove it after installed.
+
+Package: deepin-faker
+Version: 1.0.0
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 8
+Provides: dde-wayland-config, dde-wldpms, dde-wloutput, dde-wloutput-daemon, deepin-sync-daemon, uos-license-content
+Homepage: http://github.com/linuxdeepin/startdde
+Priority: standard
+Section: metapackages
+Filename: pool/main/d/deepin-faker/deepin-faker_1.0.0_amd64.deb
+Size: 1740
+SHA256: da096d4bf6b2bb92af8fedc426e047d9b8890432ded56773aa2c535e3a4b1d05
+SHA1: f8c54dbd36f1ba6745e5bf61d4d9af47acfb86d8
+MD5sum: f65c68d4bf29c6bba5e31b1fdcb3c0e8
+Description: deepin fake
+ deepin fake package
+
+Package: deepin-installer
+Source: deepin-installer-reborn
+Version: 2.2.17
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 27377
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libparted2 (>= 3.1), libqt5core5a (>= 5.15.1), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.8.0) | libqt5gui5-gles (>= 5.8.0), libqt5network5 (>= 5.5.0), libqt5widgets5 (>= 5.15.1), libqt5x11extras5 (>= 5.6.0), libqt5xml5 (>= 5.0.2), libstdc++6 (>= 5.2), libx11-6 (>= 2:1.2.99.901), libxext6, libxi6 (>= 2:1.2.99.4), libxrandr2 (>= 2:1.2.99.3), libxtst6, zlib1g (>= 1:1.1.4), btrfs-progs, deepin-installer-timezones, dosfstools, imagemagick, jfsutils, mtools, ntfs-3g, os-prober, parted, pciutils, reiserfsprogs, squashfs-tools, tshark, udev, x11-xserver-utils, xfsprogs, xinit, xkb-data
+Homepage: http://www.deepin.org
+Priority: extra
+Section: utils
+Filename: pool/main/d/deepin-installer-reborn/deepin-installer_2.2.17_amd64.deb
+Size: 20159404
+SHA256: 45d27575ff5a6a386b85bbacb1688cf3918000a01faa000da788c178bdde9c9d
+SHA1: 18b0119e0ae95b58803ef1525c707900379fd209
+MD5sum: 42d7457715b7cafb6d257894d15fb36f
+Description: Release version of deepin installer
+ New version of deepin-installer, rewritten with Qt5.
+
+Package: deepin-installer-dbgsym
+Source: deepin-installer-reborn
+Version: 2.2.17
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 46739
+Depends: deepin-installer (= 2.2.17)
+Priority: optional
+Section: debug
+Filename: pool/main/d/deepin-installer-reborn/deepin-installer-dbgsym_2.2.17_amd64.deb
+Size: 46702640
+SHA256: 092bd1f7599dd52cb310133ada1438c98bf05d965dfc142a5c04746ba1dc35b5
+SHA1: cd38009ded13aef9361e89b7cdf252bbac7d8596
+MD5sum: 3c8dfe093541d26441d642ef4f175e0a
+Description: debug symbols for deepin-installer
+Build-Ids: 489c6222704eb135da2aa166962abea258763853 9b89cb6e919f81973121d7f27dc3774d4fe5e7be a3127767d3c1691ad4b484eec1b467098b379944 a6b3b86663a13024836f826b9d5e7500bc51a68a b5f4662258c2775d6c457d588f1b8fd7890081c5 c4b25a7ae599c5cc2c100fba5e521d394443ab6d
+
+Package: deepin-installer-oem
+Source: deepin-installer-reborn
+Version: 2.2.17
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 252
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5a (>= 5.15.1), libqt5gui5 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libqt5xml5 (>= 5.0.2), libstdc++6 (>= 5.2), deepin-installer
+Homepage: http://www.deepin.org
+Priority: extra
+Section: utils
+Filename: pool/main/d/deepin-installer-reborn/deepin-installer-oem_2.2.17_amd64.deb
+Size: 74776
+SHA256: 7ab28eb871354e2b26c68ac8ca9f081d8b5db0500b6017b071068a8aa69c7e64
+SHA1: 8f44e53a78ab296cd97f2541249964571a31bb7d
+MD5sum: 407497272cace25dfac8d146f27a7c31
+Description: OEM tool
+ OEM tool for deepin-installer
+
+Package: deepin-installer-oem-dbgsym
+Source: deepin-installer-reborn
+Version: 2.2.17
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 2634
+Depends: deepin-installer-oem (= 2.2.17)
+Priority: optional
+Section: debug
+Filename: pool/main/d/deepin-installer-reborn/deepin-installer-oem-dbgsym_2.2.17_amd64.deb
+Size: 2637372
+SHA256: 91a7a24aa045f1f174dc95d810624cc6e555d00fdf4ac1143d1fdbbfca84c94f
+SHA1: 94f7632daecb6f4704d7383ebd452daed4bf4b6d
+MD5sum: 47d5613c0f16096e782960257c32322f
+Description: debug symbols for deepin-installer-oem
+Build-Ids: 0edbc79b092c12b9778cc1dcab9855ad0bc121cc
+
+Package: deepin-installer-timezones
+Source: deepin-installer-reborn
+Version: 2.2.17
+Architecture: all
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 546
+Homepage: http://www.deepin.org
+Priority: extra
+Section: utils
+Filename: pool/main/d/deepin-installer-reborn/deepin-installer-timezones_2.2.17_all.deb
+Size: 53572
+SHA256: cdc674cdc00306375482390e9ee20d750b3cb0794a795f155384ac39d42c14c2
+SHA1: a81d72819b677028f0225405ec8980e1fe40af61
+MD5sum: 9262e6e859e23d2550b7fae3ec52990e
+Description: Language package for timezone names
+ Installer language package for timezone names
+
+Package: deepin-keyring
+Version: 2021.06.07-1
+Architecture: all
+Maintainer: lilongyu <leaeasy@linuxdeepin.com>
+Installed-Size: 35
+Depends: gnupg
+Recommends: gpgv
+Multi-Arch: foreign
+Priority: important
+Section: misc
+Filename: pool/main/d/deepin-keyring/deepin-keyring_2021.06.07-1_all.deb
+Size: 8408
+SHA256: f21364b031c798d1a0b063f23b608507926480677971b9ebc10f6c28da6504d0
+SHA1: e0c72479d4268ae0e75b129fa4ff718d186af06c
+MD5sum: 5bf84a882c64781a31765147909f6949
+Description: GnuPG keys of the Deepin archive
+ The Deepin project digitally signs its Release files. This package
+ contains the archive keys used for that.
+
+Package: golang-codegangsta-cli-dev
+Source: golang-codegangsta-cli
+Version: 1.18.0-3
+Architecture: all
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Installed-Size: 13
+Depends: golang-github-codegangsta-cli-dev
+Homepage: https://github.com/codegangsta/cli
+Priority: optional
+Section: oldlibs
+Filename: pool/main/g/golang-codegangsta-cli/golang-codegangsta-cli-dev_1.18.0-3_all.deb
+Size: 6412
+SHA256: f6bf8ef62bff29b4837774843c6c67675a914b921760b98b9ac949a4cbcc4359
+SHA1: b15e24bfde0b1a54ce2ccbcfcbcae45ba8fddb4d
+MD5sum: 822ae6a1e65d041eb3657e88960f4488
+Description: Transitional package for golang-github-codegangsta-cli-dev
+ This is a transitional package to ease upgrades to the
+ golang-github-codegangsta-cli-dev package. It can be safely removed.
+
+Package: golang-github-codegangsta-cli-dev
+Source: golang-codegangsta-cli
+Version: 1.18.0-3
+Architecture: all
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Installed-Size: 217
+Depends: golang-github-urfave-cli-dev
+Breaks: golang-codegangsta-cli-dev (<< 0.0~git20150117-2~)
+Replaces: golang-codegangsta-cli-dev (<< 0.0~git20150117-2~)
+Provides: golang-codegangsta-cli-dev
+Homepage: https://github.com/codegangsta/cli
+Priority: optional
+Section: devel
+Filename: pool/main/g/golang-codegangsta-cli/golang-github-codegangsta-cli-dev_1.18.0-3_all.deb
+Size: 42640
+SHA256: d52a1aef63e57d52c9b7399ad5494c95f6f429f2c746973c3455627f70086fe1
+SHA1: 1be4d34c34bab206397a7558ca903f5b49075178
+MD5sum: c966fdb8d1d039cdaba7a6b04af681dd
+Description: simple library for building command line apps in Go
+ cli.go is simple library for building command line apps in Go. It
+ allows is writing fast and distributable command line applications in an
+ expressive way.
+ .
+ This package contains the source.
+
+Package: golang-github-gavv-monotime-dev
+Source: golang-github-gavv-monotime
+Version: 0.1-1
+Architecture: all
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 18
+Homepage: https://github.com/gavv/monotime
+Priority: extra
+Section: devel
+Filename: pool/main/g/golang-github-gavv-monotime/golang-github-gavv-monotime-dev_0.1-1_all.deb
+Size: 3660
+SHA256: cf3e69cbb7086e3fc40bd84eee02419766479454aab2bc130c4b319ec252c046
+SHA1: b47bb43b51172685548394220de58ecf147b6380
+MD5sum: d45c4e32d4e19b35b4ffe0b368a3e713
+Description: Measuring time intervals correctly in Go (monotonic clock).
+ monotime GoDoc (https://godoc.org/github.com/gavv/monotime) Travis
+ (https://travis-ci.org/gavv/monotime) This tiny Go package is
+ a standalone and slightly enhanced version of goarista/monotime
+ (https://github.com/aristanetworks/goarista#monotime).
+ .
+ It provides monotime.Now() function, which returns current time
+ from monotonic clock source. It's implemented using unexported
+ runtime.nanotime() function from Go runtime. It works on all platforms.
+ Why?  time.Now() function from standard library returns real time
+ (CLOCK_REALTIME in POSIX) which can jump forwards and backwards as the
+ system time is changed.
+ .
+ For time measurements, monotonic time (CLOCK_MONOTONIC or
+ CLOCK_MONOTONIC_RAW on Linux) is often preferred, which is strictly
+ increasing, without (notable) jumps.  Documentation See GoDoc
+ (https://godoc.org/github.com/gavv/monotime).  Usage example ```go
+ package main
+ .
+ import (
+     "fmt" "time"
+ "github.com/gavv/monotime"
+ .
+ )
+ .
+ func main() {
+     var start, elapsed time.Duration
+ start = monotime.Now() time.Sleep(time.Millisecond) elapsed =
+ monotime.Since(start)
+ .
+ fmt.Println(elapsed) // Prints: 1.062759ms
+ .
+ } ``` Similar packages• aristanetworks/goarista/monotime
+ (https://github.com/aristanetworks/goarista#monotime)
+ (this package is based on it)• spacemonkeygo/monotime
+ (https://github.com/spacemonkeygo/monotime) (current
+ runtime.nanotime() is more complete)• davecheney/junk/clock
+ (https://github.com/davecheney/junk/tree/master/clock) (Linux-only)•
+ jaracil/clk (https://github.com/jaracil/clk) (Linux-only)License Apache
+ 2.0 (https://github.com/gavv/monotime/blob/master/LICENSE)
+
+Package: golang-github-lofanmi-pinyin-dev
+Version: 1.0.2-1
+Architecture: all
+Maintainer: Uniontechos THIRD Maintainers <uniontechos-third@uniontech.com>
+Installed-Size: 1006
+Homepage: http://www.deepin.com
+Priority: optional
+Section: utils
+Filename: pool/main/g/golang-github-lofanmi-pinyin-dev/golang-github-lofanmi-pinyin-dev_1.0.2-1_all.deb
+Size: 247620
+SHA256: 761726f4bac92e162b4ea25d0a99b3b4c98e5a9e8cfea5456d707f48a55abe8d
+SHA1: 1b520b103bf16e6ddd12b2aaac227ff6e9541ce3
+MD5sum: a2743bc2d444bbd212f8daa9c861ac89
+Description: Chinese to pinyin class library
+ provide more accurate Chinese to pinyin solutions.
+
+Package: golang-github-mdlayher-netlink-dev
+Source: golang-github-mdlayher-netlink
+Version: 1.6.0-1
+Architecture: all
+Maintainer: electricface <songwentai@uniontech.com>
+Installed-Size: 217
+Depends: golang-github-mdlayher-socket-dev, golang-github-josharian-native-dev, golang-golang-x-net-dev, golang-golang-x-sys-dev
+Homepage: https://github.com/mdlayher/netlink
+Priority: optional
+Section: libdevel
+Filename: pool/main/g/golang-github-mdlayher-netlink/golang-github-mdlayher-netlink-dev_1.6.0-1_all.deb
+Size: 41124
+SHA256: a1bec431486a24604b0e6eec2ad65d1a3aa9b95bf4dbaf730de60e5608983421
+SHA1: c0224d74924b7e06e37a00355c32b2295ae0cb39
+MD5sum: c85df11d9aba87feede39cc4f7a4fd7e
+Description: netlink library for Go
+ This package provides low-level access to Linux netlink sockets (AF_NETLINK).
+
+Package: ipwatchd
+Version: 1.2.2+fake-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 9
+Homepage: http://github.com/linuxdeepin/startdde
+Priority: standard
+Section: metapackages
+Filename: pool/main/i/ipwatchd/ipwatchd_1.2.2+fake-1_amd64.deb
+Size: 1728
+SHA256: 0469df857af72078e078a5ec52f14b549cc251779497fa770d3f9776c0ab9ca0
+SHA1: c24c3295c8ab0ad0eb610047a02432d2fd3e91ea
+MD5sum: 959d3502d47c61d1ab7dd457fd4f1cec
+Description: start deepin desktop environment
+ starter of deepin desktop environment.
+
+Package: lastore-daemon
+Version: 5.3.22+fake-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 9
+Homepage: http://github.com/linuxdeepin/startdde
+Priority: standard
+Section: metapackages
+Filename: pool/main/l/lastore-daemon/lastore-daemon_5.3.22+fake-1_amd64.deb
+Size: 1752
+SHA256: a31007d0beafbc7aeee7521bebead11bcfdfcd6faa79b94746bcae2477f994a8
+SHA1: 0f3b07b880d4feb6a7fa7e8dad98016971f5cea8
+MD5sum: 40448f5095daa2396ce0408a7697bcf6
+Description: start deepin desktop environment
+ starter of deepin desktop environment.
+
+Package: libdareader-dev
+Source: libdareader
+Version: 1.0.2-1
+Architecture: amd64
+Maintainer: chenlinxuan <chenlinxuan@uniontech.com>
+Installed-Size: 17
+Depends: libdareader1 (= 1.0.2-1)
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Filename: pool/main/libd/libdareader/libdareader-dev_1.0.2-1_amd64.deb
+Size: 2596
+SHA256: e88ac46d0460461e251bf0725cf9c83d2ac1728d2db99a97b2c925b5705c2e07
+SHA1: c56c75107bedaeaaf53c606ffcd1c24d08ea63ac
+MD5sum: f4bf5140a5fbfdbdcb91d7c59441421c
+Description: dev lib for read image/video data from deepin-authentication
+ this package is a dev lib for read image/video data from deepin-authentication.
+
+Package: libdareader1
+Source: libdareader
+Version: 1.0.2-1
+Architecture: amd64
+Maintainer: chenlinxuan <chenlinxuan@uniontech.com>
+Installed-Size: 32
+Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.0), libstdc++6 (>= 6)
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libd/libdareader/libdareader1_1.0.2-1_amd64.deb
+Size: 5776
+SHA256: d075b827557b2f2dcbfdd172687eb882ca32beff0bb71b1bd12f88c80b48597f
+SHA1: 3b9182f2d0136adf63236a3a2f8d1238fcfb92f8
+MD5sum: 4858dfdeb87eeeb3ccd89f92ebb7db6a
+Description: lib for read image/video data from deepin-authentication
+ this package is a lib for read image/video data from deepin-authentication.
+
+Package: libdareader1-dbgsym
+Source: libdareader
+Version: 1.0.2-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: chenlinxuan <chenlinxuan@uniontech.com>
+Installed-Size: 55
+Depends: libdareader1 (= 1.0.2-1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/libd/libdareader/libdareader1-dbgsym_1.0.2-1_amd64.deb
+Size: 41000
+SHA256: 63a1cd804a0542cd1ee0ce02de155373aa8115ab98af0a5ac1fd6f2ea98a1580
+SHA1: 177bdef1b366e79f3a05686e3b54dcd539486697
+MD5sum: b2ef508652b65db4c07ca64c9635c298
+Description: debug symbols for libdareader1
+Build-Ids: 595c92f15c4dc80fe594c1e47fb11a52d7715adb
+
+Package: libdeepin-authenticate
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 137
+Depends: libc6 (>= 2.34), libglib2.0-0 (>= 2.37.3), libjson-c5 (>= 0.15), libssl3 (>= 3.0.0)
+Homepage: http://www.deepin.org
+Priority: optional
+Section: devel
+Filename: pool/main/d/deepin-authenticate/libdeepin-authenticate_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 29800
+SHA256: 1995c4873d85bd4df22e983fb7deb8eee7d30ee2574f5242598a31dc6b447e68
+SHA1: f06e7cdb04ce98b4589eebe21bfd8e2023585ea3
+MD5sum: 2e14b744d912d56acd971c31981091e7
+Description: deepin authenticate development kit
+ libdeepin-authentication is a development kit to develop application for authentication.
+
+Package: libdeepin-authenticate-dbgsym
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 52
+Depends: libdeepin-authenticate (= 1.3.23+r500+gd6bc03b-1)
+Priority: optional
+Section: debug
+Filename: pool/main/d/deepin-authenticate/libdeepin-authenticate-dbgsym_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 8212
+SHA256: c3e73d41a25ff3ea5ff1d462c511d8d0a7bd71ac3ad132e68054a46b12d16686
+SHA1: cfa65271771305e32ca6cec6dbf40f2026f65b77
+MD5sum: c9fd3b5438f827e6c091b74e42ef7583
+Description: debug symbols for libdeepin-authenticate
+Build-Ids: a845690ff46d781ce968788d1553147895217ceb
+
+Package: libdeepin-authenticate-dev
+Source: deepin-authenticate
+Version: 1.3.23+r500+gd6bc03b-1
+Architecture: amd64
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Installed-Size: 31
+Depends: libdeepin-authenticate
+Homepage: http://www.deepin.org
+Priority: optional
+Section: devel
+Filename: pool/main/d/deepin-authenticate/libdeepin-authenticate-dev_1.3.23+r500+gd6bc03b-1_amd64.deb
+Size: 4852
+SHA256: 2540f6132f84995e20daa0db96a0ff12f1fae10caba8ac3c1787ac3bca4cac71
+SHA1: 0825f9d5f2adf2c7b600c597c1be7ba4fd9dcb0e
+MD5sum: 7a0208b5672997f8a2afa9bf73badb40
+Description: deepin authenticate development kit's file
+ libdeepin-authentication-dev is some file for libdeepin-authenticate.
+
