@@ -20,7 +20,18 @@ jobs:
           echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
           sudo apt-get update
           sudo apt-get install -y ca-certificates
+      - name: Include
+        id: include
+        run: |
+          echo "::set-output name=value::$(cat include | xargs)"
+      - name: Cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ~/sid-base-amd64.tgz
+          key: ${{ steps.include.outputs.value }}
       - name: Create base
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get -y install pbuilder debian-archive-keyring
           sudo pbuilder create --architecture amd64 \
@@ -29,7 +40,7 @@ jobs:
                                --basetgz ~/sid-base-amd64.tgz \
                                --allow-untrusted \
                                --debootstrapopts --keyring=/usr/share/keyrings/debian-archive-keyring.gpg \
-                               --debootstrapopts --include=debian-archive-keyring,ca-certificates,libglib2.0-dev
+                               --debootstrapopts --include=debian-archive-keyring,ca-certificates,${{ steps.include.outputs.value }}
   Package:
     needs: [ Setup ]
     continue-on-error: true
@@ -50,7 +61,14 @@ jobs:
           sudo apt-get install devscripts pbuilder -y
           mkdir deb
           python tools/import.py deb packages/${{ matrix.pkg }}
+      - name: Cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ~/sid-base-amd64.tgz
+          key: sid-base-amd64
       - name: Package
+        if: steps.cache.outputs.cache-hit == 'true'
         run: |
           mkdir ~/hooks/
           cat << EOF > ~/hooks/D50Update
