@@ -20,16 +20,12 @@ jobs:
           echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
           sudo apt-get update
           sudo apt-get install -y ca-certificates
-      - name: Include
-        id: include
-        run: |
-          echo "::set-output name=value::$(cat include | xargs)"
       - name: Cache
         id: cache
         uses: actions/cache@v3
         with:
           path: ~/sid-base-amd64.tgz
-          key: ${{ steps.include.outputs.value }}
+          key: sid-base-amd64
       - name: Create base
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
@@ -40,7 +36,7 @@ jobs:
                                --basetgz ~/sid-base-amd64.tgz \
                                --allow-untrusted \
                                --debootstrapopts --keyring=/usr/share/keyrings/debian-archive-keyring.gpg \
-                               --debootstrapopts --include=debian-archive-keyring,ca-certificates,${{ steps.include.outputs.value }}
+                               --debootstrapopts --include=debian-archive-keyring,ca-certificates
   Package:
     needs: [ Setup ]
     continue-on-error: true
@@ -71,17 +67,23 @@ jobs:
         if: steps.cache.outputs.cache-hit == 'true'
         run: |
           mkdir ~/hooks/
+          reps=$(python3 tools/get_depends.py packages/${{ matrix.pkg }})
           cat << EOF > ~/hooks/D50Update
           #!/bin/sh
           #
           # Runs apt-get update after all other repos have been added.
           #
 
-          echo "deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-deps-repo sid main" >> /etc/apt/sources.list
+          echo "deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-deps-repo sid main" > /etc/apt/sources.list
           echo "deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-repo sid main">> /etc/apt/sources.list
           echo "deb http://debian-mirror.sakura.ne.jp/debian/ sid main contrib non-free" >> /etc/apt/sources.list
 
           apt-get update || true
+          
+          apt-get install $reps -y || true
+          echo "================"
+          pkg-config --cflags gio-unix-2.0
+          echo "================"
           EOF
           chmod +x ~/hooks/D50Update
           cd deb
