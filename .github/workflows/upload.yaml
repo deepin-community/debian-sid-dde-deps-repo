@@ -66,6 +66,23 @@ jobs:
       - name: Package
         if: steps.cache.outputs.cache-hit == 'true'
         run: |
+          mkdir ~/hooks/
+          cat << EOF > ~/hooks/D50Update
+          #!/bin/sh
+          #
+          # Runs apt-get update after all other repos have been added.
+          #
+          scriptpath=$(cd "$(dirname $0)"; pwd)
+
+          cat $scriptpath/sources.list > /etc/apt/sources.list
+
+          apt-get update || true
+          EOF
+          cat << EOF > ~/hooks/sources.list
+          deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-deps-repo sid main
+          deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-repo sid main
+          deb http://debian-mirror.sakura.ne.jp/debian/ sid main contrib non-free
+          EOF
           cd deb
           sudo pbuilder --build \
                         --basetgz ~/sid-base-amd64.tgz \
