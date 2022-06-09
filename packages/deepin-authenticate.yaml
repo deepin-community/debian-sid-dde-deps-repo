@@ -1,7 +1,5 @@
 metadata:
-  base_url: https://community-packages.deepin.com/deepin/pool/main/d/
+  base_url: https://deepin-community.github.io/web/
   name: deepin-authenticate
-  version: 1.3.11
+  version: 1.3.23+r500+gd6bc03b
   rebuild: 1
-depends:
-  - name: libglib2.0-dev
