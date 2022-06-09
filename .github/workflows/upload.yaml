@@ -72,17 +72,14 @@ jobs:
           #
           # Runs apt-get update after all other repos have been added.
           #
-          scriptpath=$(cd "$(dirname $0)"; pwd)
 
-          cat $scriptpath/sources.list > /etc/apt/sources.list
+          echo "deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-deps-repo sid main" >> /etc/apt/sources.list
+          echo "deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-repo sid main">> /etc/apt/sources.list
+          echo "deb http://debian-mirror.sakura.ne.jp/debian/ sid main contrib non-free" >> /etc/apt/sources.list
 
           apt-get update || true
           EOF
-          cat << EOF > ~/hooks/sources.list
-          deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-deps-repo sid main
-          deb [trusted=yes] https://deepin-community.github.io/debian-sid-dde-repo sid main
-          deb http://debian-mirror.sakura.ne.jp/debian/ sid main contrib non-free
-          EOF
+          chmod +x ~/hooks/D50Update
           cd deb
           sudo pbuilder --build \
                         --basetgz ~/sid-base-amd64.tgz \
