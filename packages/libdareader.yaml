@@ -1,0 +1,5 @@
+metadata:
+  base_url: https://community-packages.deepin.com/deepin/pool/main/libd/
+  name: libdareader
+  version: 1.0.2
+  rebuild: 1
