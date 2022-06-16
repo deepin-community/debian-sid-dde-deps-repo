@@ -1,0 +1,5 @@
+metadata:
+  base_url: https://deepin-community.github.io/web/
+  name: lastore-daemon
+  version: 5.3.22+fake
+  rebuild: 1
