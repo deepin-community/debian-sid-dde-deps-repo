@@ -1,0 +1,5 @@
+metadata:
+  base_url: https://deepin-community.github.io/web/
+  name: dde-kwin
+  version: 5.5.16+r002+gc3dd6e8b9
+  rebuild: 1
