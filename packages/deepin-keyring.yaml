@@ -1,0 +1,5 @@
+metadata:
+  base_url: https://community-packages.deepin.com/deepin/pool/main/d/
+  name: deepin-keyring
+  version: 2021.06.07
+  rebuild: 1
