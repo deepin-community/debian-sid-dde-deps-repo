@@ -1,0 +1,5 @@
+metadata:
+  base_url: https://deepin-community.github.io/web/
+  name: ipwatchd
+  version: 1.2.2+fake
+  rebuild: 1
