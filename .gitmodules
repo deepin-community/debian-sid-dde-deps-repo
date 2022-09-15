@@ -1,0 +1,3 @@
+[submodule "sources/deepin-desktop-environment"]
+	path = sources/deepin-desktop-environment
+	url = https://github.com/deepin-community/deepin-desktop-environment

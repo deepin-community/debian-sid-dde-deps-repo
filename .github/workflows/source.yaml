@@ -1,4 +1,4 @@
-name: Upload
+name: Source
 on:
   push:
     branches:
@@ -10,11 +10,23 @@ jobs:
       matrix: ${{ steps.matrix.outputs.value }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
       - id: matrix
         name: Matrix
         shell: bash
         run: |
-          echo "::set-output name=value::$(python tools/list.py packages)"
+          cd sources
+          array=""
+          for line in `ls -d */ | cut -f1 -d'/'`; do
+            if [[ ! -n "$array" ]]
+            then
+              array='"'$line'"'
+            else
+              array=$array", "'"'$line'"'
+            fi
+          done
+          echo "::set-output name=value::[$array]"
       - name: Init
         run: |
           echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
@@ -46,17 +58,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        if: ${{ github.event.pull_request.head.sha }}
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - uses: actions/checkout@v3
-        if: ${{ github.event_name == 'push' }}
-      - name: Download files
+          submodules: 'true'
+      - name: Init
         run: |
           sudo apt-get update
-          sudo apt-get install devscripts pbuilder -y
-          mkdir deb
-          python tools/import.py deb packages/${{ matrix.pkg }}
+          sudo apt-get install devscripts pbuilder git -y
       - name: Cache
         id: cache
         uses: actions/cache@v3
@@ -67,7 +74,6 @@ jobs:
         if: steps.cache.outputs.cache-hit == 'true'
         run: |
           mkdir ~/hooks/
-          reps=$(python3 tools/get_depends.py packages/${{ matrix.pkg }})
           cat << EOF > ~/hooks/D50Update
           #!/bin/sh
           #
@@ -86,7 +92,17 @@ jobs:
           echo "================"
           EOF
           chmod +x ~/hooks/D50Update
-          cd deb
+          cd sources/${{ matrix.pkg }}
+          PROJECT_NAME=$(dpkg-parsechangelog -S Source)
+          new_dir=${PROJECT_NAME}-$(dpkg-parsechangelog --show-field Version)
+          mkdir $new_dir
+          rsync -a . $new_dir --exclude $new_dir
+          rm -rf $new_dir/.git
+          cd $new_dir
+              rm -rf $new_dir
+              dh_make --createorig -sy || true
+              dpkg-source -b ./
+          cd ..
           sudo pbuilder --build \
                         --basetgz ~/sid-base-amd64.tgz \
                         --allow-untrusted \
@@ -99,7 +115,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Debian
-          path: deb/*.deb
+          path: sources/${{ matrix.pkg }}/*.deb
   Upload:
     needs: [ Package ]
     if: ${{ github.event_name == 'push' }}
