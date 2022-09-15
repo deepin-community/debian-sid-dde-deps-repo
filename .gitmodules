@@ -1,3 +1,9 @@
 [submodule "sources/deepin-desktop-environment"]
 	path = sources/deepin-desktop-environment
 	url = https://github.com/deepin-community/deepin-desktop-environment
+[submodule "sources/deepin-installer-reborn"]
+	path = sources/deepin-installer-reborn
+	url = https://github.com/martyr-deepin/deepin-installer-reborn
+[submodule "sources/default-settings"]
+	path = sources/default-settings
+	url = https://github.com/linuxdeepin/default-settings
