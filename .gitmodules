@@ -7,3 +7,6 @@
 [submodule "sources/default-settings"]
 	path = sources/default-settings
 	url = https://github.com/linuxdeepin/default-settings
+[submodule "sources/dde-kwin"]
+	path = sources/dde-kwin
+	url = https://github.com/linuxdeepin/dde-kwin
