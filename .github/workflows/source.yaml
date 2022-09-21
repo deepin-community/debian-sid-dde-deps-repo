@@ -94,7 +94,8 @@ jobs:
           chmod +x ~/hooks/D50Update
           cd sources/${{ matrix.pkg }}
           PROJECT_NAME=$(dpkg-parsechangelog -S Source)
-          new_dir=${PROJECT_NAME}-$(dpkg-parsechangelog --show-field Version)
+          tag=$(dpkg-parsechangelog -S Version | cut -f1 -d '-') || echo
+          new_dir=${PROJECT_NAME}-$tag
           mkdir $new_dir
           rsync -a . $new_dir --exclude $new_dir
           rm -rf $new_dir/.git
