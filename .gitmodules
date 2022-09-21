@@ -10,3 +10,5 @@
 [submodule "sources/dde-kwin"]
 	path = sources/dde-kwin
 	url = https://github.com/linuxdeepin/dde-kwin
+[submodule "deepin-installer-reborn"]
+	url = https://github.com/deepin-community/deepin-installer-reborn
