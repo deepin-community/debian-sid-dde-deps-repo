@@ -1,0 +1,22 @@
+Source: deepin-faker
+Section: metapackages
+Priority: standard
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Build-Depends: debhelper
+Standards-Version: 4.5.1
+Homepage: http://github.com/linuxdeepin/startdde
+
+Package: deepin-faker
+Architecture: any
+Provides:
+ dde-wldpms,
+ dde-wloutput,
+ dde-wloutput-daemon,
+ uos-license-content,
+ deepin-sync-daemon,
+ dde-wayland-config
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: deepin fake
+ deepin fake package
